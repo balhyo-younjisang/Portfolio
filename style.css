@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  border: 0;
+}
+
+img {
+  width: 10vh;
+  height: 10vh;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin: 2vh;
+  float: left;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-items {
+  align-items: center;
+}
+
+p {
+  font-size: 10rem;
+  font-weight: bolder;
+  margin: 10rem;
+}
+
+.container {
+  height: 100%;
+}
