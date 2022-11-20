@@ -1,164 +1,193 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/2aaa63f48e.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <nav
-      class="container w3-container w3-center w3-animate-left"
-      id="introduce-container"
-    >
-      <p>Youn Jisang</p>
-      <a href="https://www.instagram.com/yunjisang_/"
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-      <a href="https://github.com/balhyo-younjisang">
-        <i class="fa fa-github-alt" aria-hidden="true"></i
-      ></a>
-    </nav>
 
-    <nav class="container" id="stacks-container">
-      <h1 style="text-align: center">
-        <strong>My Stacks</strong>
-      </h1>
-      <div id="stacks">
-        <ul>
-          <li
-            class="flex-box flex-col grid-item align-items"
-            v-for="badge in badges"
-          >
-            <img :src="badge.src" />
-            <span>{{badge.name}}</span>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/2aaa63f48e.js" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+  <title>Document</title>
+</head>
 
-    <nav class="container" id="project-container">
-      <p style="text-align: center; font-size: 5rem">My Project</p>
-    </nav>
-    <script>
-      const appObj = new Vue({
-        el: "#stacks",
-        data: {
-          badges: [
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-              name: "Javascript",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-              name: "Python",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-              name: "HTML5",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-              name: "CSS3",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-              name: "SASS(SCSS)",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-              name: "Java",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-              name: "Jquery",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
-              name: "Babel",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-              name: "C",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-              name: "C++",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
-              name: "C#",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-              name: "Express",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-              name: "Git",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-              name: "Github",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg",
-              name: "Jupyter",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-              name: "Mongodb",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-              name: "Nodejs",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
-              name: "npm",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
-              name: "slack",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
-              name: "Tensorflow",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-              name: "Typescript",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
-              name: "Unity",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-              name: "Vuejs",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
-              name: "VisualStudio",
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-              name: "VScode",
-            },
-          ],
+<body>
+  <div class="container w3-container w3-center w3-animate-left" id="introduce-container">
+    <p>Youn Jisang</p>
+    <a href="https://www.instagram.com/yunjisang_/"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://github.com/balhyo-younjisang">
+      <i class="fa fa-github-alt" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="container w3-container w3-center w3-animate-left" id="stacks-container">
+    <h1 style="text-align: center">
+      <strong>My Stacks</strong>
+      <h5 style="text-align: center;">
+        <strong>
+          I can use...
+        </strong>
+      </h5>
+    </h1>
+    <div id="stacks">
+      <ul style="display: grid; grid-template-columns: repeat(5, 1fr);">
+        <li class="flex-box flex-col grid-item align-items" v-for="badge in badges">
+          <img :src="badge.src" />
+          <span style="display: none;">{{badge.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container w3-container w3-center w3-animate-right" id="project-container">
+    <p style="text-align: center; font-size: 5rem">My Project</p>
+  </div>
+</body>
+<script>
+  const appObj = new Vue({
+    el: "#stacks",
+    data: {
+      badges: [
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+          name: "Javascript",
         },
-      });
-    </script>
-  </body>
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+          name: "Python",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+          name: "HTML5",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+          name: "CSS3",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+          name: "SASS(SCSS)",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+          name: "Java",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+          name: "Jquery",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
+          name: "Babel",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+          name: "C",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+          name: "C++",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+          name: "C#",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+          name: "Express",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          name: "Git",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+          name: "Github",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg",
+          name: "Jupyter",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+          name: "Mongodb",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          name: "Nodejs",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+          name: "npm",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+          name: "slack",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+          name: "Tensorflow",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+          name: "Typescript",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+          name: "Unity",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+          name: "Vuejs",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
+          name: "VisualStudio",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+          name: "VScode",
+        },
+        {
+          src: "./logos/pug.png",
+          name: "Pug",
+        },
+        {
+          src: "./logos/es6.png",
+          name: "ES6",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
+          name: "Threejs",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+          name: "AndroidStudio",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+          name: "bootstrap",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+          name: "Figma",
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+          name: "Firebase",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+          name: "flask",
+        },
+
+      ],
+    },
+  });
+</script>
+
 </html>

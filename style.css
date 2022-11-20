@@ -5,6 +5,10 @@ body {
   border: 0;
 }
 
+canvas {
+  display: block;
+}
+
 img {
   width: 10vh;
   height: 10vh;

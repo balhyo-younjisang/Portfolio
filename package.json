@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "dependencies": {
+    "three": "^0.146.0"
+  },
+  "name": "portfolio",
+  "description": "my portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balhyo-younjisang/Portfolio.git"
+  },
+  "author": "younjisang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balhyo-younjisang/Portfolio/issues"
+  },
+  "homepage": "https://github.com/balhyo-younjisang/Portfolio#readme"
+}
